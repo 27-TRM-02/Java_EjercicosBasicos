@@ -79,6 +79,13 @@ public class EjerciciosBasicosJava {
         return true;
     }
     
+    /**
+     * 
+     * @param a
+     * @param b
+     * @param c
+     * @return 
+     */
     public boolean menorPor10(int a, int b, int c){
         if (a + 10 == b || b + 10 == a){
             return true;
@@ -87,6 +94,28 @@ public class EjerciciosBasicosJava {
             return true;
         }
         if (c + 10 == a || a + 10 == c){
+            return true;
+        }
+        return false;
+    }
+    
+    /**
+     * 
+     * @param a
+     * @param b
+     * @return 
+     */
+    public boolean digitoIgual(int a, int b){
+        if (a / 10 == b / 10 || a / 10 == b % 10){
+            return true;
+        }
+        if (a % 10 == b / 10 || a % 10 == b % 10){
+            return true;
+        }
+        if (b / 10 == a / 10 || b / 10 == a % 10){
+            return true;
+        }
+        if (b % 10 == a / 10 || b % 10 == a % 10){
             return true;
         }
         return false;
@@ -126,6 +155,10 @@ public class EjerciciosBasicosJava {
         System.out.println(ejercicio.menorPor10(1, 7, 10));
         System.out.println(ejercicio.menorPor10(11, 1, 7));
         
+        System.out.println("EJERCICIO 06 - DIGITO IGUAL");
+        System.out.println(ejercicio.digitoIgual(12, 23));
+        System.out.println(ejercicio.digitoIgual(12, 43));
+        System.out.println(ejercicio.digitoIgual(12, 44));
     }
     
 }
