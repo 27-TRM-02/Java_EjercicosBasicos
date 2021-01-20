@@ -120,6 +120,54 @@ public class EjerciciosBasicosJava {
         }
         return false;
     }
+    
+    /**
+     * 
+     * @param a
+     * @return 
+     */
+    public boolean multiploMultiple(int a){
+        if (a % 3 == 0 && a % 5 == 0){
+           return  false;
+        }
+        if (a % 3 == 0 || a % 5 == 0){
+           return  true;
+        }
+        return false;
+    }
+    
+    /**
+     * 
+     * @param a
+     * @return 
+     */
+    public boolean menos20(int a){
+        if ((a % 20) - 2 >= 2){
+            return true;
+        }
+        return false;
+    }
+    
+    /**
+     * 
+     * @param a
+     * @param b
+     * @param c
+     * @return 
+     */
+    public int loteria(int a, int b, int c){
+      if (a == 2 && b == 2 && c == 2){
+        return 10;
+      }
+      if (a == b && b == c){
+        return 5;
+      }
+      return 0;
+    }
+    
+    public int withoutDoubles(int a, int b, boolean noDoubles){
+        return 0;
+    }
 
     /**
      * @param args the command line arguments
@@ -159,6 +207,23 @@ public class EjerciciosBasicosJava {
         System.out.println(ejercicio.digitoIgual(12, 23));
         System.out.println(ejercicio.digitoIgual(12, 43));
         System.out.println(ejercicio.digitoIgual(12, 44));
+        
+        System.out.println("EJERCICIO 07 - MULTIPLO MULTIPLE");
+        System.out.println(ejercicio.multiploMultiple(3));
+        System.out.println(ejercicio.multiploMultiple(10));
+        System.out.println(ejercicio.multiploMultiple(15));
+        
+        System.out.println("EJERCICIO 08 - MENOS 20");
+        System.out.println(ejercicio.menos20(18));
+        System.out.println(ejercicio.menos20(19));
+        System.out.println(ejercicio.menos20(20));
+        
+        System.out.println("EJERCICIO 09 - LOTERIA");
+        System.out.println(ejercicio.loteria(2, 2, 2));
+        System.out.println(ejercicio.loteria(2, 2, 1));
+        System.out.println(ejercicio.loteria(0, 0, 0));
+        
+        System.out.println("EJERCICIO 10 - SUMA DADOS");
     }
     
 }
